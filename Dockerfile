@@ -135,6 +135,8 @@ RUN apk --no-cache add \
 
 WORKDIR /opt/emqttd
 
+# convert to unix
+RUN dos2unix -u /opt/emqttd/start.sh
 # start emqttd and initial environments
 CMD ["/opt/emqttd/start.sh"]
 
